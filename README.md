@@ -67,7 +67,7 @@ username = 'username'
 password = 'password'
 
 payload = {
-  'source': 'google_search', #here we define source
+  'source': 'google_search',
   'query': 'gaming chair'
 }
 
@@ -85,7 +85,7 @@ username = 'username'
 password = 'password'
 
 payload = {
-  'source': 'google_search', #here we define source
+  'source': 'google_search',
   'query': 'gaming chair'
 }
 
@@ -114,7 +114,7 @@ username = 'username'
 password = 'password'
 
 payload = {
-  'source': 'google_search', #here we define source
+  'source': 'google_search',
   'query': 'gaming chair',
   'geo-location': 'New York,New York,United States'
 }
@@ -142,7 +142,7 @@ username = 'username'
 password = 'password'
 
 payload = {
-  'source': 'google_search', #here we define source
+  'source': 'google_search',
   'query': 'gaming chair',
   'geo-location': 'New York,New York,United States',
   'user_agent_type': 'mobile'
@@ -166,12 +166,13 @@ with open ('scraped_website.html', 'w') as output:
 
 ```python
 import requests
+import json
 
 username = 'username'
 password = 'password'
 
 payload = {
-  'source': 'google_search', #here we define source
+  'source': 'google_search',
   'query': 'gaming chair',
   'geo-location': 'New York,New York,United States',
   'user_agent_type': 'mobile',
@@ -180,10 +181,10 @@ payload = {
 
 response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
 
-html_content = response.json()['results'][0]['content']
+json_content = response.json()['results'][0]['content']
 
-with open ('scraped_website.html', 'w') as output:
-  output.write(html_content)
+with open('parsed_website.json', 'w', encoding='utf-8') as output:
+  json.dump(json_content, output, ensure_ascii=False, indent=4)
 ```
 
 And this is it - now you know how to set up SERP Scraper API and use it to your advantage. 

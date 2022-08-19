@@ -156,7 +156,7 @@ with open ('scraped_website.html', 'w') as output:
   output.write(html_content)
 ```
 
-9. To receive structured data, you can add a `parse` parameter and set it to `true`:
+9. To receive structured data, you can add a `parse` parameter and set it to `True`:
 
 ```python
 "parse": True

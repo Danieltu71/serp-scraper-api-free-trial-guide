@@ -51,7 +51,7 @@ username = 'username'
 password = 'password'
 
 payload = {
-  'source': 'google_search', #here we define source
+  'source': 'google_search',
   'query': 'gaming chair'
 }
 

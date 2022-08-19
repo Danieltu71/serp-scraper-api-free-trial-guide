@@ -159,7 +159,7 @@ with open ('scraped_website.html', 'w') as output:
 9. To receive structured data, you can add a `parse` parameter and set it to `true`:
 
 ```python
-"parse": true
+"parse": True
 ```
 
 ### Example:
@@ -176,7 +176,7 @@ payload = {
   'query': 'gaming chair',
   'geo-location': 'New York,New York,United States',
   'user_agent_type': 'mobile',
-  'parse': true
+  'parse': True
 }
 
 response = requests.post('https://realtime.oxylabs.io/v1/queries', json = payload, auth = (username, password))
